@@ -4,10 +4,7 @@
   --hover: #bbbbbb;
 }
 
-html,
-body {
-  background: var(--back);
-}
+html, body { background: var(--back); }
 
 #image_container {
   display: flex;
@@ -19,15 +16,15 @@ body {
   scroll-behavior: smooth;
 }
 
+.meme {
+  padding: 0vw;
+  margin: 0vw;
+}
+
 .meme p {
   margin: 1vh 0vw 1vw 0vw;
   font-family: sans-serif;
   color: white;
-}
-
-.meme {
-  padding: 0vw;
-  margin: 0vw;
 }
 
 #navbar_buttons {
@@ -35,16 +32,15 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   margin: 0rem 10vw;
+  width: 80vw;
   transform: translateY(-3vh);
   z-index: 1;
 }
-#navbar_buttons > * {display: block;}
 
 img {
   width: 80vw;
   height: 50vh;
   object-fit: contain;
-  display: inline-block;
 }
 
 a {
