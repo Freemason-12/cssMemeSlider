@@ -11,6 +11,7 @@ body {
 
 #image_container {
   display: flex;
+  gap: 1vw;
   overflow: hidden;
   width: 80vw;
   height: 55vh;
@@ -18,15 +19,8 @@ body {
   scroll-behavior: smooth;
 }
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  margin: 0vw 10vw;
-  width: 80vw;
-}
-
 .meme p {
-  margin: 1vh 1vw 1vw 1vw;
+  margin: 1vh 0vw 1vw 0vw;
   font-family: sans-serif;
   color: white;
 }
@@ -37,10 +31,10 @@ body {
 }
 
 #navbar_buttons {
-  float: right;
   display: flex;
   flex-direction: row;
-  margin: 0rem 10vw 0rem 0rem;
+  justify-content: flex-end;
+  margin: 0rem 10vw;
   transform: translateY(-3vh);
   z-index: 1;
 }
@@ -50,9 +44,7 @@ img {
   width: 80vw;
   height: 50vh;
   object-fit: contain;
-  margin: 0vw 1vw;
   display: inline-block;
-  scroll-snap-align: center;
 }
 
 a {
@@ -85,4 +77,19 @@ input[type="radio"]:hover {
 
 input[type="radio"]:checked {
   background: var(--back);
+}
+
+@media(max-width: 640px) {
+  #image_container {
+    height: 65vh;
+  }
+  .meme p {
+    margin: 5vh 0vw 1vw 0vw;
+    text-align: center;
+  }
+  #navbar_buttons {
+    transform: translateY(-13vh);
+    float: none;
+    justify-content: center;
+  }
 }
