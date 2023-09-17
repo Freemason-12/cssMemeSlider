@@ -6,87 +6,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
-  <style>
-    :root {
-      --back: #252525;
-      --accent: #4477bb;
-      --hover: #bbbbbb;
-    }
-
-    html,
-    body {
-      background: var(--back);
-    }
-
-    #image_container {
-      display: flex;
-      overflow: hidden;
-      width: 80vw;
-      height: 80vw;
-      margin: 0vw 10vw;
-      scroll-behavior: smooth;
-    }
-
-    #navbuttons {
-      float: right;
-      margin: 1rem;
-    }
-
-    img {
-      width: 80vw;
-      height: 80vw;
-      object-fit: cover;
-      margin: 0vw 1vw;
-      display: inline-block;
-      scroll-snap-align: center;
-    }
-
-    a {
-      display: inline-block;
-      width: 1rem;
-      height: 1rem;
-      border-radius: 50%;
-      appearance: none;
-    }
-
-    input[type="radio"] {
-      width: 1rem;
-      height: 1rem;
-      appearance: none;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
-        inset 0rem 0rem 0rem 0.25rem var(--accent);
-      outline: var(--back) solid 0.3em;
-      outline-offset: -0.1em;
-      margin: 0vw;
-    }
-
-    input[type="radio"]:hover {
-      cursor: pointer;
-      background: var(--hover);
-      box-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
-        inset 0rem 0rem 0rem 0.25rem var(--hover);
-    }
-
-    input[type="radio"]:checked {
-      background: var(--back);
-    }
-  </style>
 </head>
 
 <body>
   <div id="image_container">
-    <img src="img/1.jpg" id="img1" alt="first meme">
-    <img src="img/2.jpg" id="img2" alt="second meme">
-    <img src="img/3.webp" id="img3" alt="third meme">
-    <img src="img/4.gif" id="img4" alt="fourth meme">
+    <div class="meme"><img src="img/1.jpg" id="img1" alt="first meme">
+      <p>Why are your eyes red son?</p>
+    </div>
+    <div class="meme"><img src="img/2.jpg" id="img2" alt="second meme">
+      <p>I know H.T.M.L.</p>
+    </div>
+    <div class="meme"><img src="img/3.webp" id="img3" alt="third meme">
+      <p>If the variable is constant...</p>
+    </div>
+    <div class="meme"><img src="img/4.gif" id="img4" alt="fourth meme">
+      <p>Me: This piece of code is useless...</p>
+    </div>
   </div>
-  <div id="navbuttons">
-    <a href="#img1"><input type="radio" name="nav"></a>
-    <a href="#img2"><input type="radio" name="nav"></a>
-    <a href="#img3"><input type="radio" name="nav"></a>
-    <a href="#img4"><input type="radio" name="nav"></a>
+  <div id="navbar_buttons">
+    <a href="#img1"><input type="radio" name="nav" id="r1" checked></a>
+    <a href="#img2"><input type="radio" name="nav" id="r2"></a>
+    <a href="#img3"><input type="radio" name="nav" id="r3"></a>
+    <a href="#img4"><input type="radio" name="nav" id="r4"></a>
   </div>
 
 </body>

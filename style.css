@@ -1,0 +1,91 @@
+:root {
+  --back: #252525;
+  --accent: #4477bb;
+  --hover: #bbbbbb;
+}
+
+html, body { background: var(--back); }
+
+#image_container {
+  display: flex;
+  gap: 1vw;
+  overflow: hidden;
+  width: 80vw;
+  height: 55vh;
+  margin: 0vw 10vw;
+  scroll-behavior: smooth;
+}
+
+.meme {
+  padding: 0vw;
+  margin: 0vw;
+}
+
+.meme p {
+  margin: 1vh 0vw 1vw 0vw;
+  font-family: sans-serif;
+  color: white;
+}
+
+#navbar_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0rem 10vw;
+  width: 80vw;
+  transform: translateY(-3vh);
+  z-index: 1;
+}
+
+img {
+  width: 80vw;
+  height: 50vh;
+  object-fit: contain;
+}
+
+a {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  appearance: none;
+}
+
+input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  appearance: none;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
+    inset 0rem 0rem 0rem 0.25rem var(--accent);
+  outline: var(--back) solid 0.3em;
+  outline-offset: -0.1em;
+  margin: 0vw;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+  background: var(--hover);
+  box-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
+    inset 0rem 0rem 0rem 0.25rem var(--hover);
+}
+
+input[type="radio"]:checked {
+  background: var(--back);
+}
+
+@media(max-width: 640px) {
+  #image_container {
+    height: 65vh;
+  }
+  .meme p {
+    margin: 5vh 0vw 1vw 0vw;
+    text-align: center;
+  }
+  #navbar_buttons {
+    transform: translateY(-13vh);
+    float: none;
+    justify-content: center;
+  }
+}
