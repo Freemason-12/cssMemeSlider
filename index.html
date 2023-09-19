@@ -9,27 +9,30 @@
 </head>
 
 <body>
+  <input type="radio" name="nav" id="r1" checked>
+  <input type="radio" name="nav" id="r2">
+  <input type="radio" name="nav" id="r3">
+  <input type="radio" name="nav" id="r4">
   <div id="image_container">
-    <div class="meme"><img src="img/1.jpg" id="img1" alt="first meme">
-      <p>Why are your eyes red son?</p>
-    </div>
-    <div class="meme"><img src="img/2.jpg" id="img2" alt="second meme">
-      <p>I know H.T.M.L.</p>
-    </div>
-    <div class="meme"><img src="img/3.webp" id="img3" alt="third meme">
-      <p>If the variable is constant...</p>
-    </div>
-    <div class="meme"><img src="img/4.gif" id="img4" alt="fourth meme">
-      <p>Me: This piece of code is useless...</p>
+    <div id="memes">
+      <div class="meme"><img src="img/1.jpg" id="img1" alt="first meme">
+        <p>Why are your eyes red son?</p>
+      </div>
+      <div class="meme"><img src="img/2.jpg" id="img2" alt="second meme">
+        <p>I know H.T.M.L.</p>
+      </div>
+      <div class="meme"><img src="img/3.webp" id="img3" alt="third meme">
+        <p>If the variable is constant...</p>
+      </div>
+      <div class="meme"><img src="img/4.gif" id="img4" alt="fourth meme">
+        <p>Me: This piece of code is useless...</p>
+      </div>
     </div>
   </div>
-  <div id="navbar_buttons">
-    <a href="#img1"><input type="radio" name="nav" id="r1" checked></a>
-    <a href="#img2"><input type="radio" name="nav" id="r2"></a>
-    <a href="#img3"><input type="radio" name="nav" id="r3"></a>
-    <a href="#img4"><input type="radio" name="nav" id="r4"></a>
-  </div>
-
+  <label for="r1" id="l1"></label>
+  <label for="r2" id="l2"></label>
+  <label for="r3" id="l3"></label>
+  <label for="r4" id="l4"></label>
 </body>
 
 </html>
