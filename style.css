@@ -2,19 +2,24 @@
   --back: #252525;
   --accent: #4477bb;
   --hover: #bbbbbb;
+  --default-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
+    inset 0rem 0rem 0rem 0.25rem var(--accent);
+  --hover-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
+    inset 0rem 0rem 0rem 0.25rem var(--hover);
+
 }
 
 html, body { background: var(--back); }
 
 #image_container {
-  display: flex;
-  gap: 1vw;
   overflow: hidden;
   width: 80vw;
   height: 55vh;
   margin: 0vw 10vw;
-  scroll-behavior: smooth;
 }
+
+#memes { display: flex; }
+input { display: none; }
 
 .meme {
   padding: 0vw;
@@ -25,16 +30,6 @@ html, body { background: var(--back); }
   margin: 1vh 0vw 1vw 0vw;
   font-family: sans-serif;
   color: white;
-}
-
-#navbar_buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 0rem 10vw;
-  width: 80vw;
-  transform: translateY(-3vh);
-  z-index: 1;
 }
 
 img {
@@ -51,41 +46,45 @@ a {
   appearance: none;
 }
 
-input[type="radio"] {
+label {
   width: 1rem;
   height: 1rem;
   appearance: none;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
-    inset 0rem 0rem 0rem 0.25rem var(--accent);
+  box-shadow: var(--default-shadow);
   outline: var(--back) solid 0.3em;
   outline-offset: -0.1em;
   margin: 0vw;
+  transform: translate(80vw, -3vh);
+  z-index: 1;
+  display: inline-block;
 }
 
-input[type="radio"]:hover {
+label:hover {
   cursor: pointer;
   background: var(--hover);
-  box-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
-    inset 0rem 0rem 0rem 0.25rem var(--hover);
+  box-shadow: var(--hover-shadow);
 }
 
-input[type="radio"]:checked {
+
+#r1:checked ~ #l1,
+#r2:checked ~ #l2,
+#r3:checked ~ #l3,
+#r4:checked ~ #l4 {
   background: var(--back);
 }
 
+#r1:checked ~ #image_container #memes {transform: translateX(-0vw);   transition: transform 0.2s;}
+#r2:checked ~ #image_container #memes {transform: translateX(-80vw);  transition: transform 0.2s;}
+#r3:checked ~ #image_container #memes {transform: translateX(-160vw); transition: transform 0.2s;}
+#r4:checked ~ #image_container #memes {transform: translateX(-240vw); transition: transform 0.2s;}
+
 @media(max-width: 640px) {
-  #image_container {
-    height: 65vh;
-  }
+  #image_container { height: 65vh; }
+  label { transform: translate(calc(50vw - 3rem), -13vh); }
   .meme p {
     margin: 5vh 0vw 1vw 0vw;
     text-align: center;
-  }
-  #navbar_buttons {
-    transform: translateY(-13vh);
-    float: none;
-    justify-content: center;
   }
 }
