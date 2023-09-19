@@ -2,11 +2,13 @@
   --back: #252525;
   --accent: #4477bb;
   --hover: #bbbbbb;
+  --active: white;
   --default-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
     inset 0rem 0rem 0rem 0.25rem var(--accent);
   --hover-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
     inset 0rem 0rem 0rem 0.25rem var(--hover);
-
+  --active-shadow: inset 0rem 0rem 0rem 0.2rem var(--back),
+    inset 0rem 0rem 0rem 0.25rem var(--active);
 }
 
 html, body { background: var(--back); }
@@ -65,6 +67,12 @@ label:hover {
   cursor: pointer;
   background: var(--hover);
   box-shadow: var(--hover-shadow);
+}
+
+label:active {
+  cursor: pointer;
+  background: var(--active);
+  box-shadow: var(--active-shadow);
 }
 
 
